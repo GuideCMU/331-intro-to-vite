@@ -18,6 +18,16 @@ import HelloWorld from './components/HelloWorld.vue'
   </header>
 
   <RouterView />
+  <div id="layout">
+    <header>
+      <div class="wrapper">
+        <nav>
+          <Router-link to="/">Home</Router-link>
+          <Router-link to="/about">About</Router-link>
+        </nav>
+      </div>
+    </header>
+  </div>
 </template>
 
 <style scoped>
@@ -34,8 +44,13 @@ header {
 nav {
   width: 100%;
   font-size: 12px;
+#layout {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 2rem;
+  color: #2c3e50;
 }
 
 nav a.router-link-exact-active {
@@ -44,12 +59,16 @@ nav a.router-link-exact-active {
 
 nav a.router-link-exact-active:hover {
   background-color: transparent;
+nav {
+  padding: 30px;
 }
 
 nav a {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
+  font-weight: bold;
+  color: #2c3e50;
 }
 
 nav a:first-of-type {
@@ -81,5 +100,7 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
