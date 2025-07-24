@@ -9,9 +9,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <div class="wrapper">
         <nav>
-          <RouterLink to="/about">Event</RouterLink> |
-          <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/students">Students</RouterLink>
+          <RouterLink :to="{ name: 'home' }">Event</RouterLink>
+          <RouterLink :to="{ name: 'about' }">About</RouterLink>
+          <RouterLink :to="{ name: 'students' }">Students</RouterLink>
         </nav>
       </div>
     </header>
