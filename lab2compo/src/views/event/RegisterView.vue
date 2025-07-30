@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { defineProps, toRefs } from 'vue'
 import { type Event } from '@/types'
+import { useRouter } from 'vue-router'
 
 const props = defineProps<{
   event: Event
