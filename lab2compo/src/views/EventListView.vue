@@ -59,7 +59,7 @@ onMounted(() => {
     <h1>Event For Good</h1>
     <!-- new element -->
 
-  <div class="events">
+  <div class="flex flex-col item-center">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
     <div class="pagination">
       <router-link
@@ -93,21 +93,18 @@ onMounted(() => {
   gap: 10px;
   margin: 20px 0;
 }
-.events {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .category {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
+
 .pagination {
   display: flex;
   width: 290px;
 }
+
 .pagination a {
   flex: 1;
   text-decoration: none;
