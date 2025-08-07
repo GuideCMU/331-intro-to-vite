@@ -14,7 +14,7 @@ const { message } = storeToRefs(store)
         <h4>{{ message }}</h4>
       </div>
       <div class="wrapper">
-        <nav class="py-6">
+        <nav class="py-6 hover:bg-sky-700">
           <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'home' }">Event</RouterLink>
           <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'about' }">About</RouterLink>
           <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'students' }">Students</RouterLink>
