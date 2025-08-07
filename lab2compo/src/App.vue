@@ -10,14 +10,14 @@ const { message } = storeToRefs(store)
 
   <div class="text-center font-sans text-gray-700 antialias">
     <header>
-      <div id="flashMessage" v-if="message">
+      <div id="flashMessage" class="animate-fade " v-if="message">
         <h4>{{ message }}</h4>
       </div>
       <div class="wrapper">
-        <nav>
-          <RouterLink :to="{ name: 'home' }">Event</RouterLink>
-          <RouterLink :to="{ name: 'about' }">About</RouterLink>
-          <RouterLink :to="{ name: 'students' }">Students</RouterLink>
+        <nav class="py-6">
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'home' }">Event</RouterLink>
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'about' }">About</RouterLink>
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'students' }">Students</RouterLink>
         </nav>
       </div>
     </header>
@@ -26,34 +26,3 @@ const { message } = storeToRefs(store)
   </div>
 </template>
 
-<style scoped>
-
-nav {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-@keyframes yellofade {
-  from {
-    background-color: yellow;
-  }
-  to {
-    background-color: transparent;
-  }
-}
-#flashMessage {
-  animation: yellofade 3s ease-in-out;
-}
-</style>
