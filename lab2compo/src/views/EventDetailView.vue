@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, defineProps } from 'vue'
-import { type Event } from '@/types'
+import { type Event } from '@/type'
 import EventService from '@/services/EventService'
 
-const event = ref<Event | null>(null)
+// Props
 const props = defineProps({
   id: {
     type: Number,
@@ -11,9 +11,13 @@ const props = defineProps({
   },
 })
 
+// Local state
+const event = ref<Event | null>(null)
+
+// Fetch event on mount
 onMounted(() => {
-  //fetch event (by id) and set local event data
-  EventService.getEvent(parseInt(props.id))    .then((response) => {
+  EventService.getEvent(props.id)
+    .then((response) => {
       event.value = response.data
     })
     .catch((error) => {
@@ -27,5 +31,8 @@ onMounted(() => {
     <h1>{{ event.title }}</h1>
     <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
     <p>{{ event.description }}</p>
+  </div>
+  <div v-else>
+    <p>Loading event...</p>
   </div>
 </template>
