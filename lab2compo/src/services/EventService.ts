@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/GuideCMU/compolab2db',
+  baseURL: 'http://localhost:8080',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 export default {
   getEvents(perPage: Number, page: Number) {
-   return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
+    return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
   },
 
   getEvent(id: number) {
