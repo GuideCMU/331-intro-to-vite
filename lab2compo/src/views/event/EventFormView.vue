@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { type Event as EventType } from '@/types'
+import { type Event as Event } from '@/types'
 import { ref } from 'vue'
 import EventService from '@/services/EventService'
 import { useRouter } from 'vue-router'
 import { useMessageStore } from '@/stores/message'
 
-const event = ref<EventType>({
+const event = ref<Event>({
   id: 0,
   category: '',
   title: '',
@@ -13,7 +13,7 @@ const event = ref<EventType>({
   location: '',
   date: '',
   time: '',
-  petsAllowed: false, // << สำคัญ: ให้ตรงกับ backend
+  petAllowed: false, // << สำคัญ: ให้ตรงกับ backend
   organizer: '',
 })
 
@@ -65,7 +65,7 @@ function saveEvent() {
         <input v-model="event.time" type="text" placeholder="e.g. 12.00 pm." class="field" />
 
         <label>
-          <input v-model="event.petsAllowed" type="checkbox" />
+          <input v-model="event.petAllowed" type="checkbox" />
           Pet allowed
         </label>
 

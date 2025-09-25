@@ -7,7 +7,7 @@
     location: 'Meow Town',
     date: 'January 28, 2022',
     time: '12:00',
-    petsAllowed: true,
+    petAllowed: true,
     organizer: 'Kat Laydee'
   },
   {
@@ -18,7 +18,7 @@
     location: 'Flora City',
     date: 'March 14, 2022',
     time: '10:00',
-    petsAllowed: true,
+    petAllowed: true,
     organizer: 'Fern Pollin'
   },
   {
@@ -29,7 +29,7 @@
     location: 'Playa Del Carmen',
     date: 'July 22, 2022',
     time: '11:00',
-    petsAllowed: false,
+    petAllowed: false,
     organizer: 'Carey Wales'
   }
 ]

@@ -48,7 +48,7 @@ watchEffect(() => {
     <router-link
       v-for="size in pageSizeOption"
       :key="size"
-      :to="{ name: 'home', query: { page: 1, pageSize: size } }"
+      :to="{ name: 'event-list-view', query: { page: 1, pageSize: size } }"
     >
       <button
         class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100 transition"
@@ -65,7 +65,7 @@ watchEffect(() => {
     <div class="flex w-[290px] justify-between text-blue-700 font-medium">
       <router-link
         class="text-left hover:underline"
-        :to="{ name: 'home', query: { page: page - 1, pageSize: pageSize } }"
+        :to="{ name: 'event-list-view', query: { page: page - 1, pageSize: pageSize } }"
         rel="prev"
         v-if="page != 1"
       >
@@ -73,7 +73,7 @@ watchEffect(() => {
       </router-link>
       <router-link
         class="text-right hover:underline"
-        :to="{ name: 'home', query: { page: page + 1, pageSize: pageSize } }"
+        :to="{ name: 'event-list-view', query: { page: page + 1, pageSize: pageSize } }"
         rel="next"
         v-if="hasNextPage"
       >
