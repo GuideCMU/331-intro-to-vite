@@ -27,3 +27,12 @@ export interface MessageState {
 export interface EventState {
   event: Event | null
 }
+
+export interface Organization {
+  id: number
+  organization_name: string
+  description: string
+  email: string
+  phone?: string
+  address?: string
+}

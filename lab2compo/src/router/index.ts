@@ -12,6 +12,7 @@ import nProgress from 'nprogress'
 import EventService from '@/services/EventService'
 import { useEventStore } from '@/stores/event'
 import AddEventView from '@/views/event/EventFormView.vue'
+import AddOrganizationView from '@/views/AddOrganizationView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -103,6 +104,11 @@ const router = createRouter({
       path: '/add-event',
       name: 'add-event',
       component: AddEventView,
+    },
+    {
+      path: '/add-organization',
+      name: 'add-organization',
+      component: AddOrganizationView,
     },
   ],
   scrollBehavior(to, from, savedPosition) {
