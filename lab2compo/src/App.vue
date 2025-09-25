@@ -12,15 +12,35 @@ const { message } = storeToRefs(store)
   <SpeedInsights />
   <div class="text-center font-sans text-gray-700 antialias">
     <header>
-      <div id="flashMessage" class="animate-fade " v-if="message">
+      <div id="flashMessage" class="animate-fade" v-if="message">
         <h4>{{ message }}</h4>
       </div>
       <h1>Deploy with Vercel</h1>
       <div class="wrapper">
         <nav class="py-6 hover:bg-sky-700">
-          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'home' }">Event</RouterLink>
-          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'about' }">About</RouterLink>
-          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'students' }">Students</RouterLink>
+          <RouterLink
+            class="font-bold text-gray-700"
+            exact-active-class="text-green-500"
+            :to="{ name: 'home' }"
+          >
+            Event
+          </RouterLink>
+
+          <RouterLink
+            class="font-bold text-gray-700"
+            exact-active-class="text-green-500"
+            :to="{ name: 'about' }"
+          >
+            About
+          </RouterLink>
+
+          <RouterLink
+            class="font-bold text-gray-700"
+            exact-active-class="text-green-500"
+            :to="{ name: 'add-event' }"
+          >
+            New Event
+          </RouterLink>
         </nav>
       </div>
     </header>
@@ -28,4 +48,3 @@ const { message } = storeToRefs(store)
     <RouterView />
   </div>
 </template>
-
